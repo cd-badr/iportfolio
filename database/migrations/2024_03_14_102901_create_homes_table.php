@@ -12,8 +12,22 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('homes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            {
+                $table->id();
+                $table->string("name");
+                $table->integer("age");
+                $table->string("birthday");
+                $table->string("website");
+                $table->integer("phone");
+                $table->string("city");
+                $table->string("degree");
+                $table->string("email");
+                $table->boolean("freelance");
+                $table->timestamps();
+
+            };
+
+            
         });
     }
 
